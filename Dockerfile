@@ -9,6 +9,14 @@ RUN pip install -U torch torchvision torchtext
 RUN pip install -U motmetrics pyyaml
 RUN pip install -U jupyterlab_widgets ipywidgets
 
+# install latest npm
+RUN apt install nodejs npm
+RUN npm install -g n
+RUN n stable
+RUN apt purge -y nodejs npm
+RUN exec bash -l
+
+# install mecab
 WORKDIR /usr/src/app
 RUN git clone https://github.com/neologd/mecab-ipadic-neologd.git
 WORKDIR /usr/src/app/mecab-ipadic-neologd

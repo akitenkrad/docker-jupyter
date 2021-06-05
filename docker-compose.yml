@@ -2,10 +2,9 @@ version: '3'
 services:
   jupyterlab:
     container_name: 'jupyterlab'
-    image: jupyterlab
     build:
       context: ..
-      dockerfile: "docker-compose/Dockerfile"
+      dockerfile: "jupyter-docker/Dockerfile"
     user: root
     volumes:
       - ../:/home/JupyterLab/codes
