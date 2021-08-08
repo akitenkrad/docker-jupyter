@@ -1,16 +1,18 @@
 FROM python:3.8
+SHELL ["/bin/bash", "-c"]
 WORKDIR /usr/src/app
-RUN apt update -y && apt install -y sudo nodejs npm xvfb python-opengl ffmpeg git cmake mecab libmecab-dev mecab-ipadic-utf8
+RUN apt update -y && apt install -y sudo nodejs npm xvfb python-opengl git cmake mecab libmecab-dev mecab-ipadic-utf8
 RUN pip install --upgrade pip
-RUN pip install -U numpy scipy matplotlib ipython scikit-learn pandas pillow 
+RUN pip install -U numpy scipy matplotlib ipython scikit-learn pandas pillow attrdict
 RUN pip install -U tqdm beautifulsoup4 janome
-RUN pip install -U mecab-python3 gensim nltk seaborn opencv-python
+RUN pip install -U mecab-python3 gensim nltk seaborn opencv-python plotly
 RUN pip install -U torch torchvision torchtext
 RUN pip install -U motmetrics pyyaml
 RUN pip install -U jupyterlab_widgets ipywidgets
 
 # install latest npm
-RUN apt install nodejs npm
+RUN npm config set unsafe-perm true
+RUN apt install -y nodejs npm
 RUN npm install -g n
 RUN n stable
 RUN apt purge -y nodejs npm

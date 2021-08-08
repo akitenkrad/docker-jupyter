@@ -5,11 +5,12 @@ services:
     build:
       context: ..
       dockerfile: "jupyter-docker/Dockerfile"
+    platform: linux/amd64
     user: root
     volumes:
-      - ../:/home/JupyterLab/codes
+      - ../:/workplace
     ports:
       - "8888:8888"
     environment:
       TZ: Asia/Tokyo
-    command: jupyter lab --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.notebook_dir='/home/JupyterLab/codes' --NotebookApp.token='password'
+    command: jupyter lab --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.notebook_dir='/workplace' --NotebookApp.token='password'
