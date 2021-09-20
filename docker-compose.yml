@@ -11,6 +11,7 @@ services:
       - ../:/workplace
     ports:
       - "8888:8888"
+    working_dir: /workplace/
     environment:
       TZ: Asia/Tokyo
     command: jupyter lab --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.notebook_dir='/workplace' --NotebookApp.token='password'

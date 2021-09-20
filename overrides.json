@@ -1,0 +1,16 @@
+{
+  "@jupyterlab/apputils-extension:themes": {
+    "theme": "JupyterLab Dark"
+  },
+  "@jupyterlab/notebook-extension:tracker": {
+    "codeCellConfig": {
+      "fontFamily": "Utatane",
+      "fontSize": 15,
+      "lineNumbers": true
+    }
+  },
+  "@jupyterlab/terminal-extension:plugin": {
+    "fontFamily": "Utatane",
+    "fontSize": 16
+  }
+}
