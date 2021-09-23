@@ -9,7 +9,7 @@ RUN pip install -U numpy scipy matplotlib ipython scikit-learn pandas pillow att
                    mecab-python3 gensim nltk seaborn opencv-python plotly \
                    torch torchvision torchtext \
                    motmetrics pyyaml \
-                   jupyterlab_widgets ipywidgets
+                   jupyterlab_widgets ipywidgets pciutils cpio
 
 # install latest npm
 RUN apt install -y nodejs npm && \
