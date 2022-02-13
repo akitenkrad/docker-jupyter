@@ -39,4 +39,4 @@ RUN pip install 'jupyterlab>=3.0.0,<4.0.0a0' && \
     jupyter serverextension enable --py jupyterlab && \
     pip install jupyterlab_vim jupyterlab-lsp python-language-server[all] && \
     mkdir -p /usr/local/share/jupyter/lab/settings/
-COPY jupyter-docker/overrides.json /usr/local/share/jupyter/lab/settings/
+COPY overrides.json /usr/local/share/jupyter/lab/settings/
