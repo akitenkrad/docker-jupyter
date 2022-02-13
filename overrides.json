@@ -5,12 +5,12 @@
   "@jupyterlab/notebook-extension:tracker": {
     "codeCellConfig": {
       "fontFamily": "Utatane",
-      "fontSize": 15,
+      "fontSize": 17,
       "lineNumbers": true
     }
   },
   "@jupyterlab/terminal-extension:plugin": {
     "fontFamily": "Utatane",
-    "fontSize": 16
+    "fontSize": 17
   }
 }
